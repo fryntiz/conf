@@ -215,13 +215,14 @@ for_window [window_role="^browser$"] border none
 for_window [instance="origin.exe"] floating enable
 
 # Autoarranque
+exec_always --no-startup-id xrandr --output VGA-0 --left-of DVI-I-1
 exec_always --no-startup-id xset r rate 250 30
 exec_always --no-startup-id setxkbmap -option "ctrl:swapcaps"
 exec --no-startup-id "xset s 1800 ; xset dpms 1800 1800 1800"
 exec --no-startup-id nvidia-settings --load-config-only
 exec --no-startup-id feh --no-fehbg --bg-fill ~/.conf/config/fondo.jpg
 exec --no-startup-id pasystray
-exec --no-startup-id redshift -l 36.7756:-6.3616 -t 6500:4200 &
+# exec --no-startup-id redshift -l 36.7756:-6.3616 -t 6500:4200 &
 exec --no-startup-id ~/.local/bin/xbanish &
 exec --no-startup-id nm-applet
 exec --no-startup-id "i3-msg 'workspace 2; exec sakura; workspace 1'"
