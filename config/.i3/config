@@ -191,6 +191,8 @@ bindsym --release Shift+Print exec scrot
 # Restaura configuración de teclado (a veces se pierde al conectar un USB)
 bindsym $mod+z exec xset r rate 250 30 ; exec setxkbmap -option "ctrl:swapcaps"
 
+bindsym $mod+Shift+m exec xrandr --output VGA-0 --mode 1280x800 --rate 60 --output HDMI-0 --right-of VGA-0
+
 # Bloquea la pantalla
 bindsym $mod+Escape exec i3lock -c 000000
 
@@ -221,8 +223,9 @@ exec --no-startup-id "xset s 1800 ; xset dpms 1800 1800 1800"
 exec --no-startup-id nvidia-settings --load-config-only
 exec --no-startup-id feh --no-fehbg --bg-fill ~/.conf/config/fondo.jpg
 exec --no-startup-id pasystray
-exec --no-startup-id redshift -l 36.7756:-6.3616 -t 6500:4200 &
+# exec --no-startup-id redshift -l 36.7756:-6.3616 -t 6500:4200 &
 exec --no-startup-id ~/.local/bin/xbanish &
 exec --no-startup-id nm-applet
 exec --no-startup-id "i3-msg 'workspace 2; exec sakura; workspace 1'"
 exec --no-startup-id "i3-msg 'workspace 1; exec x-www-browser'"
+exec --no-startup-id xrandr --output VGA-0 --mode 1280x800 --rate 60 --output HDMI-0 --right-of VGA-0

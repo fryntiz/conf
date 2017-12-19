@@ -33,7 +33,7 @@ set t_8f=[38;2;%lu;%lu;%lum
 set t_8b=[48;2;%lu;%lu;%lum
 set background=light
 try
-  colorscheme NeoSolarized
+  colorscheme delek
 catch /^Vim\%((\a\+)\)\=:E185/
   " No hacer nada si no está instalado
 endtry
